@@ -1,6 +1,6 @@
-module.exports = {
+/*module.exports = {
     display: newEntry
-};
+}; */
 
 var request = require('request');
 var prompt = require('prompt');
@@ -162,10 +162,10 @@ var questions = [{
 
 ];
 
-function newEntry() {
+//function newEntry() {
 
     inquirer.prompt(questions, function(response) {
-        console.log(response.toString());
+        console.log(response);
         return response;
     });
-} 
+//}
