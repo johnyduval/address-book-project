@@ -1,0 +1,27 @@
+{
+  "name": "address-book",
+  "version": "1.0.0",
+  "description": "Creating an address book",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnyduval/address-book-project.git"
+  },
+  "keywords": [
+    "address",
+    "book",
+    "project",
+    "search",
+    "create",
+    "entry"
+  ],
+  "author": "Johny and Allan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnyduval/address-book-project/issues"
+  },
+  "homepage": "https://github.com/johnyduval/address-book-project#readme"
+}
