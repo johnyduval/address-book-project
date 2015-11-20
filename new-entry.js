@@ -1,32 +1,31 @@
-/*module.exports = {
+module.exports = {
     display: newEntry
-}; */
+}; 
 
 var request = require('request');
 var prompt = require('prompt');
 var inquirer = require('inquirer');
-var Table = require('cli-table');
 
 var questions = [{
         type: 'input',
-        name: 'First Name',
+        name: 'first_name',
         message: 'First Name'
     }, {
         type: 'input',
-        name: 'Last Name',
+        name: 'last_name',
         message: 'Last Name'
     }, {
         type: 'input',
-        name: 'Birthday',
+        name: 'birthday',
         message: 'Birthday (optional)'
     }, {
         type: 'checkbox',
         message: 'Choose the type(s) of address(es) you would like to add',
-        name: 'Addresses',
+        name: 'addresses',
         choices: ['home', 'work', 'other']
     }, {
         message: 'Enter your home address',
-        name: 'Home address',
+        name: 'home_address',
         type: 'input',
         when: function(answers) {
             if (answers.Addresses.indexOf('home') === -1) {
@@ -38,7 +37,7 @@ var questions = [{
         }
     }, {
         message: 'Enter your work address',
-        name: 'Work address',
+        name: 'work_address',
         type: 'input',
         when: function(answers) {
             if (answers.Addresses.indexOf('work') === -1) {
@@ -50,7 +49,7 @@ var questions = [{
         }
     }, {
         message: 'Enter your other address',
-        name: 'Other address',
+        name: 'other_address',
         type: 'input',
         when: function(answers) {
             if (answers.Addresses.indexOf('other') === -1) {
@@ -63,11 +62,11 @@ var questions = [{
     }, {
         type: 'checkbox',
         message: 'Choose the type(s) of email(s) you would like to add',
-        name: 'Emails',
+        name: 'emails',
         choices: ['home', 'work', 'other'],
     }, {
         message: 'Enter your home email',
-        name: 'Home email',
+        name: 'home_email',
         type: 'input',
         when: function(answers) {
             if (answers.Emails.indexOf('home') === -1) {
@@ -79,7 +78,7 @@ var questions = [{
         }
     }, {
         message: 'Enter your work email',
-        name: "Work email",
+        name: "work_email",
         type: "input",
         when: function(answers) {
             if (answers.Emails.indexOf('work') === -1) {
@@ -91,7 +90,7 @@ var questions = [{
         }
     }, {
         message: "Enter your other email",
-        name: "Other email",
+        name: "other_email",
         type: "input",
         when: function(answers) {
             if (answers.Emails.indexOf('other') === -1) {
@@ -104,11 +103,11 @@ var questions = [{
     }, {
         type: "checkbox",
         message: "Choose the type(s) of phone number(s) you would like to add",
-        name: "Number",
+        name: "number",
         choices: ["home", "work", "other"],
     }, {
         message: "Enter your home phone number",
-        name: "Home phone number",
+        name: "home_number",
         type: "input",
         when: function(answers) {
             if (answers.Number.indexOf('home') === -1) {
@@ -120,7 +119,7 @@ var questions = [{
         }
     }, {
         message: "Enter your work phone number",
-        name: "Work phone number",
+        name: "work_number",
         type: "input",
         when: function(answers) {
             if (answers.Number.indexOf('work') === -1) {
@@ -132,7 +131,7 @@ var questions = [{
         }
     }, {
         message: "Enter your other phone number",
-        name: "Other phone number",
+        name: "other_number",
         type: "input",
         when: function(answers) {
             if (answers.Number.indexOf('other') === -1) {
@@ -144,28 +143,28 @@ var questions = [{
         }
     }, {
         type: 'input',
-        name: 'Home City',
+        name: 'home_city',
         message: 'Home City'
     }, {
         type: 'input',
-        name: 'Home Province',
+        name: 'home_province',
         message: 'Home Province'
     }, {
         type: 'input',
-        name: 'Home Postal Code',
+        name: 'home_postal',
         message: 'Home Postal Code'
     }, {
         type: 'input',
-        name: 'Home Country',
+        name: 'home_country',
         message: 'Home Country'
     },
 
 ];
 
-//function newEntry() {
+function newEntry() {
 
     inquirer.prompt(questions, function(response) {
         console.log(response);
         return response;
     });
-//}
+}
