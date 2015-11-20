@@ -179,7 +179,7 @@ var questions = [{
 
 function editEntry() {
 
-inquirer.prompt(questions, function(response) {
-    return response;
-});
+    inquirer.prompt(questions, function(response) {
+        return response;
+    });
 };

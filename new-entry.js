@@ -2,8 +2,6 @@ module.exports = {
     display: newEntry
 }; 
 
-var request = require('request');
-var prompt = require('prompt');
 var inquirer = require('inquirer');
 
 var questions = [{
